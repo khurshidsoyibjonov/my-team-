@@ -1,0 +1,192 @@
+responsive design --   har bir breakpointga media yoizsh ,mukni har qanday deviceda chiroyli chiqish kerak
+adoptive design  -- asosan 3 xil break pointrga media berib yozish
+🧩 1. Adaptive Design (Moslashuvchi dizayn)
+
+Oldindan belgilangan o‘lchamlar asosida ishlaydi.
+
+Dizayner bir nechta aniq ekran o‘lchamlariga (masalan, 320px, 768px, 1024px) mos alohida layoutlar yaratadi.
+
+Foydalanuvchi qaysi qurilmadan kirayotgan bo‘lsa, shu o‘lchamga mos layout yuklanadi.
+
+Ya’ni, sayt 5 xil ekran o‘lchami uchun 5 xil dizaynga ega bo‘lishi mumkin.
+
+Afzalliklari:
+
+Har bir ekran uchun aniq nazorat va maxsus dizayn.
+
+Ma’lum qurilmalar uchun yuqori sifatli tajriba.
+
+Kamchiliklari:
+
+Ko‘p ish talab qiladi (ko‘p layout yaratish kerak).
+
+Yangi ekran o‘lchamlari paydo bo‘lsa, qo‘shimcha dizayn kerak bo‘ladi.
+
+Misol:
+
+320px — telefon uchun dizayn
+768px — planshet uchun dizayn
+1024px — kompyuter uchun dizayn
+
+🌐 2. Responsive Design (Javob beruvchi dizayn)
+
+Bitta layout, lekin u CSS media queries yordamida moslashib o‘zgaradi.
+
+Elementlar, rasm va matnlar foiz, flex, yoki grid yordamida silliq tarzda o‘lchamlarini o‘zgartiradi.
+
+Har qanday ekran o‘lchamida bitta sayt ishlaydi, lekin ko‘rinishi moslashadi.
+
+Afzalliklari:
+
+Bitta kod bazasi — kamroq ish va xizmat ko‘rsatish oson.
+
+Har qanday yangi ekran o‘lchamiga avtomatik moslashadi.
+
+Kamchiliklari:
+
+Har doim ideal ko‘rinish bermasligi mumkin (maxsus holatlar uchun).
+
+Moslashuvni sinchiklab sozlash kerak.
+
+Misol:
+
+.container {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+  }
+}
+
+🔍 Qisqacha farqi:
+Asos	Adaptive Design	Responsive Design
+Yondashuv	Oldindan belgilangan layoutlar	Dinamik moslashuv
+Layout soni	Bir nechta (har o‘lcham uchun)	Bitta (har o‘lchamga moslashadi)
+Texnologiya	JavaScript + Server-side aniqlash	CSS media queries
+Ish hajmi	Ko‘p	Nisbatan kam
+Moslashuv silliqligi	Sakrashli (breakpointdan breakpointga)	Silliq, uzluksiz
+
+
+🧩 1. Adaptive Design (oldindan belgilangan layoutlar)
+
+Bu usulda har bir ekran o‘lchami uchun alohida CSS qoidalar yoziladi.
+Masalan, 320px, 768px va 1024px uchun alohida dizayn.
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adaptive Design Misol</title>
+<style>
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .card {
+    background: #e0f7fa;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  /* Telefon (320px gacha) */
+  @media (max-width: 480px) {
+    .card {
+      width: 90%;
+      font-size: 14px;
+      background: #b2ebf2;
+    }
+  }
+
+  /* Planshet (481px - 768px) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .card {
+      width: 70%;
+      font-size: 16px;
+      background: #80deea;
+    }
+  }
+
+  /* Desktop (769px dan yuqori) */
+  @media (min-width: 769px) {
+    .card {
+      width: 40%;
+      font-size: 18px;
+      background: #4dd0e1;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h2>Adaptive Design</h2>
+    <p>Bu dizayn oldindan belgilangan o‘lchamlarga moslashadi.</p>
+  </div>
+</body>
+</html>
+
+
+📱 Har bir breakpointda (480px, 768px, 1024px) butunlay alohida layout qo‘llanadi.
+
+🌐 2. Responsive Design (dinamik moslashuvchi dizayn)
+
+Bu usulda bitta layout bo‘ladi, lekin u CSS flexbox yoki grid yordamida
+har qanday ekran o‘lchamiga silliq tarzda moslashadi.
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Design Misol</title>
+<style>
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .card {
+    background: #c8e6c9;
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+    max-width: 600px;
+  }
+
+  /* Media query orqali shunchaki tartibni o‘zgartirish */
+  @media (min-width: 768px) {
+    .container {
+      padding: 40px;
+    }
+    .card {
+      max-width: 800px;
+      font-size: 18px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2>Responsive Design</h2>
+      <p>Bu dizayn o‘lchamga qarab silliq moslashadi.</p>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+min mobile ssize 327px
+desktop first qiyinrogi desktopdan boshlash max--width
+mobile first osonrogi mobiledan bohslash min-width

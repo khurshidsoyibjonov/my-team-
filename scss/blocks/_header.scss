@@ -1,0 +1,106 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: $clr-light-green;
+  z-index: 100;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  padding: 30px;
+
+  @include DisplayFlex($justify: space-between, $align: center, $gap: 0px);
+}
+.header__left-content {
+  @include DisplayFlex($justify: start, $align: center, $gap: 80px);
+}
+.header__navbar {
+  @include DisplayFlex($justify: start, $align: center, $gap: 40px);
+}
+.header-link {
+  @include TextStyle(
+    $font-weight: 600,
+    $font-size: 18px,
+    $line-height: 28px,
+    $color: $clr-white
+  );
+  transition: all 0.3s ease;
+  &:hover {
+    color: $clr-orannge;
+  }
+}
+.header__btn {
+  @include BtnStyle(
+    $font-btn-size: 18px,
+    $bg-color: $clr-light-green,
+    $txt-color: $clr-white,
+    $PaddingTB: 10px,
+    $PaddingLR: 30px
+  );
+}
+
+.header__menu-icon {
+  display: none;
+  background: none;
+  cursor: pointer;
+}
+
+@media (min-width: 776px) and (max-width: 1024px) {
+  .header__left-content {
+    @include DisplayFlex($justify: start, $align: center, $gap: 60px);
+  }
+  .header__navbar {
+    display: none;
+    @include DisplayFlex($justify: start, $align: center, $gap: 30px);
+  }
+  .header__btn {
+    @include BtnStyle(
+      $font-btn-size: 16px,
+      $bg-color: $clr-light-green,
+      $txt-color: $clr-white,
+      $PaddingTB: 8px,
+      $PaddingLR: 26px
+    );
+  }
+}
+
+@media (min-width: 400px) and (max-width: 775px) {
+  .header__left-content {
+    @include DisplayFlex($justify: start, $align: center, $gap: 40px);
+  }
+
+  .header__navbar {
+    display: none;
+  }
+  .header__btn {
+    display: none;
+  }
+
+  .header__menu-icon {
+    display: block;
+    border: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 399px) {
+  .header__navbar {
+    display: none;
+  }
+
+  .header__menu-icon {
+    display: block;
+    border: none;
+  }
+}
+// @media (min-width: 776px) and (max-width: 1024px) {
+// }
+
+// @media (min-width: 481px) and (max-width: 775px) {
+// }
+
+// @media (min-width: 320px) and (max-width: 480px) {
+// }
