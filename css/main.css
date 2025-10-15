@@ -37,24 +37,6 @@ button {
   margin: 0 auto;
 }
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-    padding: 0 30px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-    padding: 0 30px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-    padding: 0 30px;
-  }
-}
 header {
   position: fixed;
   top: 0;
