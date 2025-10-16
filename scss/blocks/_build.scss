@@ -61,7 +61,7 @@
     );
   }
   .build {
-    @include DisplayFlex($justify: start, $align: start, $gap: 0px);
+    @include DisplayFlex($justify: center, $align: center, $gap: 0px);
     flex-direction: column;
   }
 

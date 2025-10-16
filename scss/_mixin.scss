@@ -1,10 +1,4 @@
-@mixin BtnStyle(
-  $font-btn-size,
-  $bg-color,
-  $txt-color,
-  $PaddingTB: 8px,
-  $PaddingLR: 20px
-) {
+@mixin BtnStyle($font-btn-size, $bg-color, $txt-color, $PaddingTB, $PaddingLR) {
   font-weight: 600;
   font-size: $font-btn-size;
   background-color: $bg-color;
@@ -38,7 +32,7 @@
 }
 
 @mixin BacgroundImage($BgImage, $BgPosition, $BgSize) {
-  background-image:$BgImage;
+  background-image: $BgImage;
   background-position: $BgPosition;
   background-repeat: no-repeat;
   background-size: $BgSize;

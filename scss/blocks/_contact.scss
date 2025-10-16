@@ -1,0 +1,43 @@
+.contact-section {
+  padding: 76px;
+  background-color: $clr-orannge;
+  @include BacgroundImage(
+    $BgImage: url(../../images/bg5.svg),
+    $BgPosition: left bottom,
+    $BgSize: 100px
+  );
+}
+// .contact {
+
+// }
+.contact__wrapper {
+  @include DisplayFlex($justify: space-around, $align: center, $gap: 0px);
+  max-width: 917px;
+  margin: 0 auto;
+}
+.contact__title {
+  @include TextStyle(
+    $font-weight: 700,
+    $font-size: 48px,
+    $line-height: 48px,
+    $color: #012f34
+  );
+}
+.contact__btn {
+  @include BtnStyle(
+    $font-btn-size: 18px,
+    $bg-color: $clr-orannge,
+    $txt-color: #012f34,
+    $PaddingTB: 8px,
+    $PaddingLR: 32px
+  );
+}
+
+@media (max-width: 950px) {
+  .contact__wrapper {
+    @include DisplayFlex($justify: center, $align: center, $gap: 30px);
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+}
