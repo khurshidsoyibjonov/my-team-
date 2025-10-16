@@ -1,0 +1,50 @@
+.about-section {
+  padding: 140px 0;
+}
+
+// .about {
+// }
+.about__title-wrapper {
+  width: 932px;
+  margin: 0 auto;
+  margin-bottom: 56px;
+}
+.about__title {
+  @include TextStyle(
+    $font-weight: 700,
+    $font-size: 48px,
+    $line-height: 48px,
+    $color: $clr-white
+  );
+  text-align: center;
+}
+
+.about__title-change-color {
+  color: $clr-lightblue;
+}
+.about__content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+.about__content-box {
+  @include BacgroundImage(
+    $BgImage: url(../images/bg2.svg),
+    $BgPosition: top center,
+    $BgSize: 67px 56px
+  );
+  padding-top: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  width: 350px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

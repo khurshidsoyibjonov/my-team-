@@ -1,0 +1,122 @@
+.build-section {
+  padding: 140px 0;
+  background-color: $clr-dark-green;
+  @include BacgroundImage(
+    $BgImage: url(../images/build-bg2.svg),
+    $BgPosition: right bottom,
+    $BgSize: auto
+  );
+}
+.build {
+  @include DisplayFlex($justify: space-between, $align: start, $gap: 0px);
+}
+.build__title-wrapper {
+  width: 445px;
+}
+.build__line {
+  @include Line($MarB: 54px, $LineClr: $clr-orannge);
+}
+.build__title {
+  @include TextStyle(
+    $font-weight: 700,
+    $font-size: 48px,
+    $line-height: 48px,
+    $color: $clr-white
+  );
+}
+
+.build__list-item {
+  width: 540px;
+  margin-top: 54px;
+  @include DisplayFlex($justify: start, $align: start, $gap: 23px);
+}
+.build__list-wrapper {
+  @include DisplayFlex($justify: start, $align: start, $gap: 16px);
+  flex-direction: column;
+}
+.build__list-suptitle {
+  @include TextStyle(
+    $font-weight: 700,
+    $font-size: 18px,
+    $line-height: 28px,
+    $color: $clr-orannge
+  );
+}
+.build__list-suptext {
+  @include TextStyle(
+    $font-weight: 706,
+    $font-size: 15px,
+    $line-height: 25px,
+    $color: $clr-white
+  );
+}
+
+@media (max-width: 974px) {
+  .build-section {
+    padding: 100px 0 100px 74px;
+    @include BacgroundImage(
+      $BgImage: url(../images/build-bg2.svg),
+      $BgPosition: right top,
+      $BgSize: auto
+    );
+  }
+  .build {
+    @include DisplayFlex($justify: start, $align: start, $gap: 0px);
+    flex-direction: column;
+  }
+
+  .build__title-wrapper {
+    width: 80%;
+  }
+
+  .build__line {
+    @include Line($MarB: 32px, $LineClr: $clr-orannge);
+  }
+  .build__title {
+    @include TextStyle(
+      $font-weight: 700,
+      $font-size: 32px,
+      $line-height: 32px,
+      $color: $clr-white
+    );
+  }
+
+  .build__list {
+    margin-top: 64px;
+    width: 90%;
+  }
+
+  .build__list-item {
+    @include DisplayFlex($justify: start, $align: start, $gap: 23px);
+    text-align: start;
+    width: 80%;
+  }
+}
+
+@media (max-width: 650px) {
+  .build-section {
+    padding: 64px 0;
+  }
+
+  .build__title-wrapper {
+    width: 70%;
+  }
+
+  .build__list {
+    margin-top: 54px;
+    width: 80%;
+    @include DisplayFlex($justify: center, $align: center, $gap: 48px);
+    flex-direction: column;
+  }
+  .build__list-item {
+    @include DisplayFlex($justify: center, $align: center, $gap: 16px);
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .build__list-wrapper {
+    @include DisplayFlex($justify: center, $align: center, $gap: 8px);
+    flex-direction: column;
+    text-align: center;
+  }
+}
